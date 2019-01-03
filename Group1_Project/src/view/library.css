@@ -1,0 +1,11 @@
+#top-container{
+     -fx-background-color: #fbffd1;/*#8E0000*/
+}
+
+.label {
+   -fx-text-fill: #000000;
+}
+
+#addBookCopy.label:hover,#addCopy.label:hover,#viewBook.label:hover,#addBook.label:hover,#checkoutBook.label:hover,#members.label:hover,#newMember.label:hover,#checkoutActivities.label:hover {
+  -fx-text-fill:#808080;
+}

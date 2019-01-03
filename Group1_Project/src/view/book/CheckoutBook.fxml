@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CheckOutBookController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" />
+    <ColumnConstraints hgrow="SOMETIMES" />
+      <ColumnConstraints hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="checkOutTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="sbMemberIdCol" minWidth="-1.0" prefWidth="186.0" text="Member ID" />
+            <TableColumn fx:id="sbMemberNamesCol" minWidth="-1.0" prefWidth="208.0" text="Member Names" />
+            <TableColumn fx:id="sbIsbnCol" prefWidth="200.0" text="ISBN" />
+            <TableColumn fx:id="sbTitleCol" prefWidth="184.0" text="Book Title" />
+        </columns>
+      </TableView>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="10.0" GridPane.columnSpan="3">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="73.0" text="Member Id :" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sbMemberId" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="179.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="120.0" text="ISBN : " textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sbIsbn" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="171.0" />
+            <Button mnemonicParsing="false" onAction="#checkout" text="Checkout" />
+            <Label fx:id="errorMessage" text="error message" textFill="#eb0e0e" visible="false" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</GridPane>

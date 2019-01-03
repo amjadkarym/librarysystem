@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<!--  
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.BookController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <ListView fx:id="sbBooks" prefHeight="366.0" prefWidth="348.0" onMouseClicked="#callUpdate" />
+   </children>
+</GridPane>
+-->
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx" fx:controller="control.BookController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+   <children>
+       <Label style="-fx-font: NORMAL 20 Tahoma;" text="All Books" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    </Label>
+       <TableView fx:id="sbBooks" GridPane.columnIndex="0" GridPane.rowIndex="1">
+       
+       <columns>
+          <TableColumn text="ISBN">
+          <cellValueFactory><PropertyValueFactory property="firstName" />
+          </cellValueFactory>
+          </TableColumn>
+          <TableColumn text="Title">
+          </TableColumn>
+          <TableColumn text="MaxLength">
+          </TableColumn>
+          <TableColumn text="Status">
+          </TableColumn>
+     </columns>   
+     
+     
+       
+    </TableView>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
